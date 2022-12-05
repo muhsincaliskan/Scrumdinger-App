@@ -23,13 +23,22 @@ struct MeetingView: View {
                 }
 
             }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Time remaining")
+            .accessibilityValue("10 minutes")
             Circle().strokeBorder(lineWidth: 22)
             HStack{
                 Text("Speaker 1 of 3")
+                Spacer()
+                Button(action: {
+                
+                }){
+                    Image(systemName: "forward.fill")
+                }.accessibilityLabel("Next speaker")
                 
             }
         }
-        .padding(.top, 20.0)
+        .padding()
         
     }
 }
